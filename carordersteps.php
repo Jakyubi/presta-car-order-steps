@@ -49,7 +49,8 @@ class CarOrderSteps extends Module
 
     public function hookDisplayHome($params)
     {
-        return "Hello world";
+        return $this->display(__FILE__, 'views/templates/hook/stepsFront.tpl');
+;
     }
 
 
