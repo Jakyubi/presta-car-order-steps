@@ -34,6 +34,7 @@ class CarOrderSteps extends Module
         return (
             parent::install()
             && $this->registerHook('displayHome')
+            && $this->registerHook('actionFrontControllerSetMedia')
             && Configuration::updateValue('CARORDERSTEPS_MODULE_NAME', 'Car order steps')
         );
     }
@@ -47,10 +48,18 @@ class CarOrderSteps extends Module
 
     }
 
+    public function hookActionFrontControllerSetMedia()
+    {
+        $this->context->controller->registerStylesheet(
+            'style-car-order-steps',
+            'modules/'.$this->name.'/dist/css/style.css',
+            ['media'=>'all', 'priority' => 150]
+        );
+    }
+
     public function hookDisplayHome($params)
     {
         return $this->display(__FILE__, 'views/templates/hook/stepsFront.tpl');
-;
     }
 
 
