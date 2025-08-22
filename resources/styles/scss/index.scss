@@ -5,6 +5,12 @@
     font-weight: 600;
 }
 
+.desktop-only{
+    display: none;
+}
+
+
+
 .steps-grid{
     display: flex;
     flex-direction: column;
@@ -37,4 +43,43 @@
 .steps-icon{
     filter: invert(50%) sepia(81%) saturate(500%) hue-rotate(185deg);
     margin-bottom: 25px;
+}
+
+@media (min-width: 1024px){
+    .desktop-only{
+    display: block;
+    }
+
+    .steps-wrapper{
+        display: flex;
+        gap: 10px;
+    }
+
+    .steps-left-column{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+        padding-top: 10px;
+        
+    }
+
+    .steps-arrow-wrapper{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .steps-arrow{
+        width: 250px;
+        height: auto;
+    }
+
+    .steps-grid{
+        flex: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
 }
