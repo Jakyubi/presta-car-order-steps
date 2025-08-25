@@ -45,7 +45,6 @@ class CarOrderSteps extends Module
             parent::uninstall()
             && Configuration::deleteByName('CARORDERSTEPS_MODULE_NAME')
         );
-
     }
 
     public function hookActionFrontControllerSetMedia()
@@ -61,6 +60,4 @@ class CarOrderSteps extends Module
     {
         return $this->display(__FILE__, 'views/templates/hook/stepsFront.tpl');
     }
-
-
 }
