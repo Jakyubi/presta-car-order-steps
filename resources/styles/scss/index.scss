@@ -1,7 +1,7 @@
 .steps-title {
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   font-weight: 600;
 }
 
@@ -12,12 +12,12 @@
 .steps-grid {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 1rem;
 }
 
 .steps-tile {
   border: 1px solid #cacaca;
-  padding: 20px 20px;
+  padding: 1.25rem;
   transition: transform 0.1s;
 
   &:hover {
@@ -25,28 +25,21 @@
     box-shadow: 0 2px 5px #007bff;
   }
 }
-.steps-tile i {
-  font-size: 40px;
-  color: #007bff;
-  display: block;
-  margin-bottom: 10px;
-}
 
 .steps-header {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .steps-text {
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 1rem;
   color: #666;
 }
 
 .steps-icon {
   filter: invert(50%) sepia(81%) saturate(500%) hue-rotate(185deg);
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -56,15 +49,15 @@
 
   .steps-wrapper {
     display: flex;
-    gap: 10px;
+    gap: 0.75rem;
   }
 
   .steps-left-column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.75rem;
     flex: 1;
-    padding-top: 10px;
+    padding-top: 0.75rem;
   }
 
   .steps-arrow-wrapper {
@@ -74,7 +67,7 @@
   }
 
   .steps-arrow {
-    width: 250px;
+    width: 75%;
     height: auto;
   }
 
@@ -82,6 +75,6 @@
     flex: 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 0.75rem;
   }
 }
