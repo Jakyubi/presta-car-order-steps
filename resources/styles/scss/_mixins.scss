@@ -1,0 +1,12 @@
+@mixin bp-min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin desktop-only($bp) {
+  display: none;
+  @include bp-min($bp) {
+    display: block;
+  }
+}
