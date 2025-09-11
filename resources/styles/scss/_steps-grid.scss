@@ -1,0 +1,42 @@
+@use 'variables';
+@use 'mixins';
+
+.steps-grid {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  @include mixins.bp-min(variables.$bp-desktop) {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+.steps-tile {
+  border: 1px solid #cacaca;
+  padding: 1.25rem;
+  transition: transform 0.1s;
+
+  &:hover {
+    transform: scale(1.01) translateY(-3px);
+    box-shadow: 0 2px 5px #007bff;
+  }
+}
+
+.steps-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.steps-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.steps-icon {
+  filter: invert(50%) sepia(81%) saturate(500%) hue-rotate(185deg);
+  margin-bottom: 1.5rem;
+}

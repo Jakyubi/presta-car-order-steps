@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'mixins';
+
+.desktop-only {
+  @include mixins.desktop-only(variables.$bp-desktop);
+}
+
+.steps-wrapper {
+  @include mixins.bp-min(variables.$bp-desktop) {
+    display: flex;
+    gap: 0.75rem;
+  }
+}
